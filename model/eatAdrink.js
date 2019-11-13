@@ -1,7 +1,12 @@
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
-var eat&drinkSchema=new Schema({
+var eatAdrinkSchema=new Schema({
+
+  categories:{
+    type:String,
+    requires:true
+  },
 
   title:{
     type:String,
@@ -13,4 +18,4 @@ var eat&drinkSchema=new Schema({
   }
 
 });
-module.exports=mongoose.model('eat&drink',eat&drinkSchema);
+module.exports=mongoose.model('eatAdrink',eatAdrinkSchema);

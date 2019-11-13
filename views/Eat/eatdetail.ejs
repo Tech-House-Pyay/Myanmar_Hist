@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Eat And Drink detail</h1>
+
+  categories: <%=Eat.categories %><p>
+title: <%=Eat.title %><p>
+    content: <%=Eat.content %><p>
+
+
+<button color="green" type="button" name="button" onclick='ch();'>delete</button>
+
+<a href="/Eat/eatupdate/<%=Eat._id %>">  <button type="button" name="button">update</button></a>
+  </body>
+  <script type="text/javascript">
+  function ch(){
+    var result=confirm('are you sure');
+    if(result){
+      location.href='/Eat/eatdelete/<%= Eat._id %>';
+    }
+  }
+
+  </script>
+</html>

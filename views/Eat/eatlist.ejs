@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eat And Drink List</title>
+  </head>
+  <body>
+    <h1>Eat And Drink</h1>
+    <table>
+      <thead>
+        <th>Categories</th>
+        <th>Title</th>
+        <th>Content</th>
+
+      </thead>
+      <tbody>
+        <% for(var i=0; i<Eat.length; i++){%>
+        <tr>
+          <td><a href="/Eat/eatdetail/<%=Eat[i]._id %>"><%= Eat[i].categories %></td>
+          <td><%= Eat[i].title %></td>
+          <td><%= Eat[i].content %></td>
+        </tr>
+          <%}%>
+      </tbody>
+
+    </table>
+  </body>
+</html>
