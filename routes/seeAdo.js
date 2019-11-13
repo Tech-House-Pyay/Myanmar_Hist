@@ -30,6 +30,50 @@ router.get('/seeAdolist',function (req,res) {
 
 
 });
+router.get('/seeAdodetail/:id',function (req,res) {
+  console.log(req.params.id);
+  SeeDo.findById(req.params.id,function (err,rtn) {
+    if(err)throw err;
+    else {
+      res.render('seeAdo/SeeADodetail',{seeAdo:rtn});
+    }
 
+  });
 
+});
+router.get('/seeAdoupdate/:id',function (req,res) {
+  SeeDo.findById(req.params.id,function (err,rtn) {
+    if(err)throw err;
+    else {
+      res.render('seeAdo/SeeADoupdate',{seeAdo:rtn})
+    }
+
+  });
+
+});
+router.post('/seeAdoupdate',function (req,res) {
+  var update={
+    categories:req.body.categories,
+    title:req.body.title,
+    content:req.body.content
+  }
+  SeeDo.findByIdAndUpdate(req.body.id,{$set:update},function (err,rtn) {
+       if(err)throw err;
+       else{
+         res.redirect('/seeAdo/seeAdodetail/'+req.body.id);
+       }
+
+  })
+
+})
+router.get('/seeAdodelete/:id',function (req,res) {
+  SeeDo.findByIdAndRemove(req.params.id,function (err,rtn) {
+    if(err)throw err;
+    else {
+      res.redirect('/seeAdo/seeAdolist');
+    }
+
+  })
+
+})
 module.exports=router;

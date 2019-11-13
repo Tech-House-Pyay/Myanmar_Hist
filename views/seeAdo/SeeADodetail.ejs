@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>See and Do Details</title>
+  </head>
+  <body>
+    <h1>See and Do Details</h1>
+    Categories:<%= seeAdo.categories %><p>
+    Title:<%= seeAdo.title %><p>
+    Content:<%= seeAdo.content %><P>
+      <a href="/seeAdo/seeAdoupdate/<%=seeAdo._id%>"><button type="button" name="button">Update</button></a>
+      <button type="button" onclick="ch();"" name="button">Delete</button>
+  </body>
+  <script type="text/javascript">
+    function ch(){
+      var re=confirm("Are you sure");
+      if(re){
+        location.href="/seeAdo/seeAdodelete/<%=seeAdo._id%>";
+      }
+    }
+  </script>
+</html>
