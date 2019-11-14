@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Traveller Essential Details</title>
+  </head>
+  <body>
+    <h1>Traveller Essential Details</h1>
+    Title:<%= travelleressential.title %><p>
+    Content:<%= travelleressential.content %><P>
+      <a href="/travelleressential/TEssentialupdate/<%=travelleressential._id%>"><button type="button" name="button">Update</button></a>
+      <button type="button" onclick="ch();"" name="button">Delete</button>
+  </body>
+  <script type="text/javascript">
+    function ch(){
+      var re=confirm("Are you sure");
+      if(re){
+        location.href="/travelleressential/TEssentialdelete/<%=travelleressential._id%>";
+      }
+    }
+  </script>
+</html>
