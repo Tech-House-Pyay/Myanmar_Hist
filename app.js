@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var adminRouter=require('./routes/admin');
 var seedoRouter=require('./routes/seeAdo');
 var eatRouter=require('./routes/EatAnddrink');
+var teRouter=require('./routes/travelleressential')
 var app = express();
 
 // view engine setup
@@ -32,6 +33,7 @@ app.use('/users', usersRouter);
 app.use('/admin',adminRouter);
 app.use('/seeAdo',seedoRouter);
 app.use('/eat',eatRouter);
+app.use('/travelleressential',teRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

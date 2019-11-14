@@ -15,7 +15,7 @@
       <tbody>
         <% for(var i=0; i<travelleressential.length; i++){%>
         <tr>
-          <td><%= travelleressential[i].title %></td>
+          <td><a href="/travelleressential/TEssentialdetails/<%=travelleressential[i]._id%>"><%= travelleressential[i].title %></td>
           <td><%= travelleressential[i].content %></td>
         </tr>
           <%}%>
