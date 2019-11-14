@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>See & Do List</title>
+  </head>
+  <body>
+    <h1>See And Do List</h1>
+    <table>
+      <thead>
+        <th>Categories</th>
+        <th>Title</th>
+        <th>Content</th>
+
+      </thead>
+      <tbody>
+        <% for(var i=0; i<seeAdo.length; i++){%>
+        <tr>
+          <td> <a href="/seeAdo/seeAdodetail/<%=seeAdo[i]._id%>"><%= seeAdo[i].categories %></a></td>
+          <td><%= seeAdo[i].title %></td>
+          <td><%= seeAdo[i].content %></td>
+        </tr>
+          <%}%>
+      </tbody>
+
+    </table>
+  </body>
+</html>
