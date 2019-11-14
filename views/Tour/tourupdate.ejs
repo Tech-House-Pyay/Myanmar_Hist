@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form  action="/Tour/tourupdate" method="post" >
+    <input type="hidden" name="id" value="<%=Tour._id %>"><p>
+
+      <label for="categories">categories</label>
+      <input type="text" name="categories"id="categories" value="<%= Tour.categories%>"><p>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="<%= Tour.title%>"><p>
+
+          <label for="content">content</label>
+          <input type="text" name="content" value="<%=Tour.content%>"><p>
+
+            <button type="submit" name="button"> update</button>
+
+          </form>
+  </body>
+</html>

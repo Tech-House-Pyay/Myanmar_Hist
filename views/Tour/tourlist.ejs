@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tour List</title>
+  </head>
+  <body>
+    <h1>Tour List</h1>
+    <table>
+      <thead>
+        <th>Categories</th>
+        <th>Title</th>
+        <th>Content</th>
+
+      </thead>
+      <tbody>
+        <% for(var i=0; i<Tour.length; i++){%>
+        <tr>
+        <td><a href="/Tour/tourdetail/<%=Tour[i]._id %>">  <%=Tour[i].categories %></a></td>
+          <td><%= Tour[i].title %></td>
+          <td><%= Tour[i].content %></td>
+        </tr>
+          <%}%>
+      </tbody>
+
+    </table>
+  </body>
+</html>
