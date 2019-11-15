@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Festival and Event Update</title>
+  </head>
+  <body>
+    <h1>Festival and Event Update</h1>
+    <form class="" action="/festivalAevent/faeventupdate" method="post">
+      <input type="hidden" name="id" value="<%=festivalAevent._id%>">
+      <label for="categories">Categories</label><p>
+          <select class="" id="categories" data-style="btn-info" name="categories">
+            <option value="Festival">Festival</option>
+            <option value="Event">Event</option>
+
+            </select><p>
+        <label for="title">title</label><p>
+          <input type="text" name="title" id="title" value="<%=festivalAevent._title%>"><br>
+          <label for="content">Content</label><p>
+            <textarea name="content" id="content" rows="8" cols="80"><%=festivalAevent._content%></textarea><br>
+            <button type="submit" name="button">Add</button>
+
+    </form>
+  </body>
+</html>

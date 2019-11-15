@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Festival and Event List</title>
+  </head>
+  <body>
+  <h1>Festival and Event List</h1>
+  <table>
+    <thead>
+      <th>Categories</th>
+      <th>Title</th>
+      <th>Content</th>
+    </thead>
+    <tbody>
+      <% for(var i=0;i<festivalAevent.length; i++){%>
+<tr>
+  <td> <a href="/festivalAevent/faeventdetail/<%=festivalAevent[i]._id%>"><%=festivalAevent[i].categories%></a></td>
+  <td><%=festivalAevent[i].title%></td>
+  <td><%=festivalAevent[i].content%></td>
+</tr>
+    <%}%>
+    </tbody>
+  </table>
+  </body>
+</html>

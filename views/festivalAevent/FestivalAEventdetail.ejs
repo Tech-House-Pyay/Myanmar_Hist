@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Festival and Event Detail</title>
+  </head>
+  <body>
+  <h1>Festival and Event Detail</h1>
+  Categories:<%=festivalAevent.categories %><p>
+  Title:<%=festivalAevent.title%><p>
+  Content:<%=festivalAevent.content%><p>
+    <a href="/festivalAevent/faeventupdate/<%=festivalAevent._id%>"> <button type="submit" name="button">Update</button></a>
+    <button type="submit" onclick="ch();" name="button">Delete</button>
+  </body>
+  <script type="text/javascript">
+  function ch(){
+    var re=confirm("Are you sure");
+    if(re){
+      location.href='/festivalAevent/faeventdelete/<%=festivalAevent._id%>';
+    }
+  }
+
+  </script>
+</html>
