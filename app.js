@@ -12,6 +12,7 @@ var seedoRouter=require('./routes/seeAdo');
 var eatRouter=require('./routes/EatAnddrink');
 var teRouter=require('./routes/travelleressential');
 var tourRouter=require('./routes/Tour');
+var eventRouter=require('./routes/festivalAevent');
 var app = express();
 
 // view engine setup
@@ -35,6 +36,7 @@ app.use('/users', usersRouter);
 app.use('/admin',adminRouter);
 app.use('/seeAdo',seedoRouter);
 app.use('/eat',eatRouter);
+app.use('/festivalAevent',eventRouter);
 app.use('/travelleressential',teRouter);
 app.use('/Tour',tourRouter);
 
