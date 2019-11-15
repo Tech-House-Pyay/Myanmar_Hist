@@ -2,11 +2,11 @@ var express=require('express');
 var router=express.Router();
 var Tour=require('../model/tours');
 
-router.get('/touradd',function (req,res) {
+router.get('/tourA',function (req,res) {
   res.render('Tour/touradd');
 
 });
-router.post('/touradd',function (req,res) {
+router.post('/tourA',function (req,res) {
   var sd=new Tour();
   sd.categories=req.body.categories;
   sd.title=req.body.title;
