@@ -57,8 +57,8 @@ router.get('/eatdetail/:id',function(req,res){
   Eat.findByIdAndUpdate(req.body.id,{$set: update},function(err,rtn){
       if(err) throw err;
       res.redirect('/Eat/eatdetail/'+req.body.id);
-    })
-  })
+    });
+  });
   router.get('/eatdelete/:id',function(req,res){
     Eat.findByIdAndRemove(req.params.id,function(err,rtn){
       if(err) throw err;
