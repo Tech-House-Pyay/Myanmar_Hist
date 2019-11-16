@@ -8,13 +8,23 @@
     <title>See & Do Add</title>
   </head>
   <body>
-    <form class="" action="/seeAdo/seeAdoadd" method="post">
+    <form class="" action="/seeAdo/seeAdoadd" method="post" enctype="multipart/form-data">
       <label for="categories">Categories</label><p>
-      <input type="text" name="categories" id="categories" value=""><br>
+    <select class="" id="categories" data-style="btn-info" name="categories">
+      <option value="Arts">Arts</option>
+      <option value="History">History</option>
+      <option value="Culture">Culture</option>
+      <option value="Architecture">Architecture</option>
+      <option value="NatureAndWildlife">Nature and Wildlife</option>
+
+    </select><p>
+
       <label for="title">Title</label><p>
-        <input type="text" name="title" id="title" value=""><br>
+        <input type="text" name="title" id="title" value=""><p>
       <label for="content">Content</label><p>
       <textarea name="content" id="content" rows="8" cols="80"></textarea><br>
+      <label for="photo">Photo</label><br>
+        <input type="file" name="photo" id="photo" value=""><p>
       <button type="submit" name="submit">Add</button>
     </form>
   </body>

@@ -9,7 +9,14 @@
     <form class="" action="/seeAdo/seeAdoupdate" method="post">
       <input type="hidden" name="id" value="<%=seeAdo._id%>">
       <label for="categories">Categories</label><p>
-      <input type="text" name="categories" id="categories" value="<%= seeAdo.categories%>"><br>
+        <select class="" id="categories" data-style="btn-info" name="categories">
+          <option value="Arts">Arts</option>
+          <option value="History">History</option>
+          <option value="Culture">Culture</option>
+          <option value="Architecture">Architecture</option>
+          <option value="NatureAndWildlife">Nature and Wildlife</option>
+
+        </select><p>
       <label for="title">Title</label><p>
         <input type="text" name="title" id="title" value="<%=seeAdo.title%>"><br>
       <label for="content">Content</label><p>

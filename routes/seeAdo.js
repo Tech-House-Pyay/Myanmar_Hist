@@ -1,16 +1,18 @@
 var express=require('express');
 var router=express.Router();
 var SeeDo=require('../model/seeAdo');
-
+var multer=require('multer');
+var upload=multer({dest:'public/image/uploads'});
 router.get('/seeAdoadd',function (req,res) {
   res.render('seeAdo/SeeADoadd');
 
 });
-router.post('/seeAdoadd',function (req,res) {
+router.post('/seeAdoadd',upload.single('photo'),function (req,res) {
   var sd=new SeeDo();
   sd.categories=req.body.categories;
   sd.title=req.body.title;
   sd.content=req.body.content;
+  if(req.file) sd.imgUrl='/image/uploads/'+req.file.filename;
   sd.save(function (err,rtn) {
     if(err)throw err;
     console.log(rtn);
