@@ -26,7 +26,7 @@ router.get('/tourlist',function (req,res) {
       res.render('Tour/tourlist',{Tour:rtn});
     }
 
-  })
+  });
 
 
 });
