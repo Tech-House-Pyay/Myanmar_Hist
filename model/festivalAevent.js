@@ -1,8 +1,11 @@
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
-var festival&eventSchema=new Schema({
-
+var festivaleventSchema=new Schema({
+categories:{
+  type:String,
+  required:true
+},
   title:{
     type:String,
     required:true
@@ -13,4 +16,4 @@ var festival&eventSchema=new Schema({
   }
 
 });
-module.exports=mongoose.model('festival&event',festival&eventSchema);
+module.exports=mongoose.model('festival&event',festivaleventSchema);

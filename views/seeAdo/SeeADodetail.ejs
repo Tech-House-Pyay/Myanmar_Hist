@@ -1,24 +1,46 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>See and Do Details</title>
-  </head>
-  <body>
-    <h1>See and Do Details</h1>
-    Categories:<%= seeAdo.categories %><p>
-    Title:<%= seeAdo.title %><p>
-    Content:<%= seeAdo.content %><P>
-    Profile:<img src="<%= user.imgUrl%>" height="200" width="200" alt="">
-      <a href="/seeAdo/seeAdoupdate/<%=seeAdo._id%>"><button type="button" name="button">Update</button></a>
-      <button type="button" onclick="ch();"" name="button">Delete</button>
-  </body>
-  <script type="text/javascript">
-    function ch(){
-      var re=confirm("Are you sure");
-      if(re){
-        location.href="/seeAdo/seeAdodelete/<%=seeAdo._id%>";
-      }
-    }
-  </script>
+<!-- <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<% include ../partialadmin/adminhead %>
+<body>
+    <!-- Left Panel -->
+    <% include ../partialadmin/adminsidebar %>
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="left-panel" class="left-panel">
+
+        <!-- Header-->
+      <% include ../partialadmin/admintopbar %>
+      <div class="col-sm-12">
+        <!-- Header-->
+        <h1>See and Do Details</h1>
+        Categories:<%= seeAdo.categories %><p>
+        Title:<%= seeAdo.title %><p>
+        Content:<%= seeAdo.content %><P>
+        Profile:<img src="<%=seeAdo.imgUrl%>" height="200" width="200" alt="">
+          <a href="/seeAdo/seeAdoupdate/<%=seeAdo._id%>"><button type="button" name="button">Update</button></a>
+          <button type="button" onclick="ch();"" name="button">Delete</button>
+
+      <script type="text/javascript">
+        function ch(){
+          var re=confirm("Are you sure");
+          if(re){
+            location.href="/seeAdo/seeAdodelete/<%=seeAdo._id%>";
+          }
+        }
+      </script>
+
+        </div>
+                  <% include ../partialadmin/adminfooter %>
+    <!-- Right Panel -->
+  <% include ../partialadmin/adminscript %>
+</body>
+
 </html>

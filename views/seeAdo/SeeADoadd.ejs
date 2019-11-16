@@ -1,7 +1,55 @@
+<!-- <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<% include ../partialadmin/adminhead %>
+<body>
+    <!-- Left Panel -->
+    <% include ../partialadmin/adminsidebar %>
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="left-panel" class="left-panel">
+
+        <!-- Header-->
+      <% include ../partialadmin/admintopbar %>
+      <div class="col-sm-12">
+        <!-- Header-->
+        <form class="" action="/seeAdo/seeAdoadd" method="post" enctype="multipart/form-data">
+          <label for="categories">Categories</label><p>
+        <select class="" id="categories" data-style="btn-info" name="categories">
+          <option value="Arts">Arts</option>
+          <option value="History">History</option>
+          <option value="Culture">Culture</option>
+          <option value="Architecture">Architecture</option>
+          <option value="NatureAndWildlife">Nature and Wildlife</option>
+
+        </select><p>
+
+          <label for="title">Title</label><p>
+            <input type="text" name="title" id="title" value=""><p>
+          <label for="content">Content</label><p>
+          <textarea name="content" id="content" rows="8" cols="80"></textarea><br>
+          <label for="photo">Photo</label><br>
+            <input type="file" name="photo" id="photo" value=""><p>
+          <button type="submit" name="submit">Add</button>
+        </form>
+
+        </div>
+                  <% include ../partialadmin/adminfooter %>
+    <!-- Right Panel -->
+  <% include ../partialadmin/adminscript %>
+</body>
+
+</html>
 
 
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
 <meta charset="utf-8">
@@ -27,4 +75,4 @@
         <input type="file" name="photo" id="photo" value=""><p>
       <button type="submit" name="submit">Add</button>
     </form>
-  </body>
+  </body> -->

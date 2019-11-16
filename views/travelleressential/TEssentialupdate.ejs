@@ -1,4 +1,50 @@
-<!DOCTYPE html>
+
+
+
+
+<!-- <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<% include ../partialadmin/adminhead %>
+<body>
+    <!-- Left Panel -->
+    <% include ../partialadmin/adminsidebar %>
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="left-panel" class="left-panel">
+
+        <!-- Header-->
+      <% include ../partialadmin/admintopbar %>
+      <div class="col-sm-12">
+        <!-- Header-->
+        <form class="" action="/travelleressential/TEssentialupdate" method="post">
+          <input type="hidden" name="id" value="<%=travelleressential._id%>">
+            <label for="title">Title</label><p>
+            <input type="text" name="title" id="title" value="<%=travelleressential.title%>"><br>
+          <label for="content">Content</label><p>
+          <textarea name="content" id="content" rows="8" cols="80"><%=travelleressential.content %></textarea><br>
+          <button type="submit" name="submit">Update</button>
+
+        </form>
+
+        </div>
+                  <% include ../partialadmin/adminfooter %>
+    <!-- Right Panel -->
+  <% include ../partialadmin/adminscript %>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -16,4 +62,4 @@
 
     </form>
   </body>
-</html>
+</html> -->
