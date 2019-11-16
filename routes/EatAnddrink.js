@@ -26,7 +26,7 @@ router.get('/Eatlist',function (req,res) {
       res.render('Eat/eatlist',{Eat:rtn});
     }
 
-  })
+  });
 
 
 });
