@@ -18,64 +18,27 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-
-        <h1>Tour</h1>
-        <form class="" action="/Tour/tourA" method="post">
-
-
-        <label for="categories">Category</label>
-
-        <label for="categories">Category</label>
+        <h1>Tour</h1><br>
+        <form  action="/Tour/tourA" method="post" enctype="multipart/form-data">
+        <label for="categories">Category</label><br>
         <select class="categories" name="categories">
-          <option value="Eat">Popular Place</option>
-        <option value="Drink">World Heritage Sites</option>
-
-        </select><p>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value=""><br><br>
-
-        <label for="content">Content</label>
-        <input type="text" name="content" id="content" value=""><br><br>
-
-        <button type="submit" name="submit">Tour Add</button>
+         <option value="Eat">Popular Place</option>
+         <option value="Drink">World Heritage Sites</option>
+        </select><br><br><br>
+        <label for="title">Title</label><br>
+        <input type="text" name="title" id="title" value=""><br><br><br>
+        <label for="content">Content</label><br>
+        <textarea name="content" id="content" rows="8" cols="80"></textarea><br><br><br>
+        <label for="photo">Profile</label><br>
+        <input type="file" name="photo" value=""><br><br><br>
+        <button type="submit" name="submit">Add</button><br><br><br><br>
         </form>
-        </div>
+      </div>
                   <% include ../partialadmin/adminfooter %>
     <!-- Right Panel -->
   <% include ../partialadmin/adminscript %>
 </body>
 
 </html>
-
-
-
- <!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<body bgcolor="green">
-
-<h1>Tour</h1>
-<form class="" action="/Tour/tourA" method="post">
-
-
-<label for="categories">Category</label>
-
-<label for="categories">Category</label>
-<select class="categories" name="categories">
-  <option value="Eat">Popular Place</option>
-<option value="Drink">World Heritage Sites</option>
-
-</select><p>
-<label for="title">Tittle</label>
-<input type="text" name="title" id="title" value=""><br><br>
-
-<label for="content">Content</label>
-<input type="text" name="content" id="content" value=""><br><br>
-
-<button type="submit" name="submit">Tour Add</button>
-</form>
-
-
-</body>
-</html> -->

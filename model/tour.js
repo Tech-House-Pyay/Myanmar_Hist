@@ -13,7 +13,11 @@ var toursSchema=new Schema({
   content:{
     type:String,
     required:true
+  },
+  imgUrl:{
+    type:String,
+    required:true
   }
 
 });
-module.exports=mongoose.model('tours',toursSchema);
+module.exports=mongoose.model('tour',toursSchema);

@@ -1,3 +1,4 @@
+
 <!-- <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -18,28 +19,27 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-        <h1>See And Do Update</h1>
+        <h1>See & Do Update</h1><br><br>
         <form class="" action="/seeAdo/seeAdoupdate" method="post">
           <input type="hidden" name="id" value="<%=seeAdo._id%>">
-          <label for="categories">Categories</label><p>
+          <label for="categories">Categories</label><br>
             <select class="" id="categories" data-style="btn-info" name="categories">
               <option value="Arts">Arts</option>
               <option value="History">History</option>
               <option value="Culture">Culture</option>
               <option value="Architecture">Architecture</option>
               <option value="NatureAndWildlife">Nature and Wildlife</option>
-
-            </select><p>
-          <label for="title">Title</label><p>
-            <input type="text" name="title" id="title" value="<%=seeAdo.title%>"><br>
-          <label for="content">Content</label><p>
-          <textarea name="content" id="content" rows="8" cols="80"><%=seeAdo.content %></textarea><br>
-          <button type="submit" name="submit">Update</button>
-
+            </select><br><br><br>
+          <label for="title">Title</label><br>
+          <input type="text" name="title" id="title" value="<%=seeAdo.title%>"><br><br><br>
+          <label for="content">Content</label><br>
+          <textarea name="content" id="content" rows="8" cols="80"><%=seeAdo.content %></textarea><br><br>
+          <label for="photo">profile</label><br>
+          <input type="file" name="photo" value=""><br><br><br>
+          <button type="submit" name="submit">Update</button><br><br>
         </form>
-
         </div>
                   <% include ../partialadmin/adminfooter %>
     <!-- Right Panel -->
@@ -47,8 +47,6 @@
 </body>
 
 </html>
-
-
 
 
 <!-- <!DOCTYPE html>

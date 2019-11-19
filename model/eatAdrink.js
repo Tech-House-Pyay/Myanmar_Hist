@@ -15,6 +15,10 @@ var eatAdrinkSchema=new Schema({
   content:{
     type:String,
     required:true
+  },
+  imgUrl:{
+    type:String,
+    required:true
   }
 
 });
