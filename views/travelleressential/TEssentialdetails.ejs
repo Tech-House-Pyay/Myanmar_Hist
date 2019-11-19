@@ -1,4 +1,3 @@
-
 <!-- <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -19,15 +18,15 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-        <h1>Traveller Essential Details</h1>
-        Title:<%= travelleressential.title %><p>
-        Content:<%= travelleressential.content %><P>
+        <h1>Traveller Essential Details</h1><br><br>
+        Title:&nbsp;&nbsp;<%= travelleressential.title %><br><br><br>
+        Content:&nbsp;&nbsp;<%= travelleressential.content %><br><br><br>
+        Profile:&nbsp;&nbsp;<img src="<%=travelleressential.imgUrl%>" height="200" width="200" alt=""><br><br><br>
           <a href="/travelleressential/TEssentialupdate/<%=travelleressential._id%>"><button type="button" name="button">Update</button></a>
-          <button type="button" onclick="ch();"" name="button">Delete</button>
-      </body>
-      <script type="text/javascript">
+          <button type="button" onclick="ch();" name="button">Delete</button><br><br><br><br>
+            <script type="text/javascript">
         function ch(){
           var re=confirm("Are you sure");
           if(re){
@@ -35,6 +34,7 @@
           }
         }
       </script>
+
         </div>
                   <% include ../partialadmin/adminfooter %>
     <!-- Right Panel -->

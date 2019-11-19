@@ -1,16 +1,20 @@
 var express=require('express');
 var router=express.Router();
 var FE=require('../model/festivalAevent');
+var multer=require('multer');
+var upload=multer({dest:'public/image/festivalphoto'});
+
 
 router.get('/faeventadd',function (req,res) {
   res.render('festivalAevent/FestivalAEventadd');
 
 });
-router.post('/faeventadd',function (req,res) {
+router.post('/faeventadd',upload.single('photo'),function (req,res) {
   var dd=new FE();
   dd.categories=req.body.categories;
   dd.title=req.body.title;
   dd.content=req.body.content;
+  if(req.file)dd.imgUrl='/image/festivalphoto/'+req.file.filename;
   dd.save(function (err,rtn) {
     if(err)throw err;
 
@@ -39,7 +43,7 @@ router.get('/faeventdetail/:id',function (req,res) {
   });
 
 });
-router.get('/faeventupdate/:id',function (req,res) {
+router.get('/faeventupdate/:id',upload.single('photo'),function (req,res) {
   FE.findById(req.params.id,function (err,rtn) {
     if(err)throw err;
     res.render('festivalAevent/FestivalAEventupdate',{festivalAevent:rtn})
@@ -53,6 +57,7 @@ router.post('/faeventupdate',function (req,res) {
     title:req.body.title,
     content:req.body.content
   }
+  if(req.file) update.imgUrl='/image/festivalphoto/'+req.file.filename;
   FE.findByIdAndUpdate(req.body.id,{$set:update},function (err,rtn) {
     if(err)throw err;
     res.redirect('/festivalAevent/faeventdetail/'+req.body.id);

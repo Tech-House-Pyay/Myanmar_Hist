@@ -1,16 +1,20 @@
 var express=require('express');
 var router=express.Router();
 var TravellerE=require('../model/travelleressential');
+var multer=require('multer');
+var upload=multer({dest:'public/image/travelphoto'});
+
 
 router.get('/TEssentialadd',function (req,res) {
   res.render('travelleressential/TEssentialadd');
 
 });
-router.post('/TEssentialadd',function (req,res) {
+router.post('/TEssentialadd',upload.single('photo'),function (req,res) {
   var TE=new TravellerE();
 
   TE.title=req.body.title;
   TE.content=req.body.content;
+  if(req.file) TE.imgUrl='/image/travelphoto/'+req.file.filename;
   TE.save(function (err,rtn) {
     if(err)throw err;
     console.log(rtn);
@@ -51,11 +55,12 @@ router.get('/TEssentialupdate/:id',function (req,res) {
   });
 
 });
-router.post('/TEssentialupdate',function (req,res) {
+router.post('/TEssentialupdate',upload.single('photo'),function (req,res) {
   var update={
     title:req.body.title,
     content:req.body.content
   }
+  if(req.file)update.imgUrl='/image/travelphoto/'+req.file.filename;
   TravellerE.findByIdAndUpdate(req.body.id,{$set:update},function (err,rtn) {
        if(err)throw err;
        else{

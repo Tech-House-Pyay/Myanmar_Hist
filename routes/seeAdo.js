@@ -2,7 +2,7 @@ var express=require('express');
 var router=express.Router();
 var SeeDo=require('../model/seeAdo');
 var multer=require('multer');
-var upload=multer({dest:'public/image/uploads'});
+var upload=multer({dest:'public/image/seedophoto'});
 router.get('/seeAdoadd',function (req,res) {
   res.render('seeAdo/SeeADoadd');
 
@@ -12,7 +12,7 @@ router.post('/seeAdoadd',upload.single('photo'),function (req,res) {
   sd.categories=req.body.categories;
   sd.title=req.body.title;
   sd.content=req.body.content;
-  if(req.file) sd.imgUrl='/image/uploads/'+req.file.filename;
+  if(req.file) sd.imgUrl='/image/seedophoto/'+req.file.filename;
   sd.save(function (err,rtn) {
     if(err)throw err;
     console.log(rtn);
@@ -44,6 +44,7 @@ router.get('/seeAdodetail/:id',function (req,res) {
 
 });
 router.get('/seeAdoupdate/:id',function (req,res) {
+  console.log(req.params.id);
   SeeDo.findById(req.params.id,function (err,rtn) {
     if(err)throw err;
     else {
@@ -59,6 +60,7 @@ router.post('/seeAdoupdate',function (req,res) {
     title:req.body.title,
     content:req.body.content
   }
+  if(req.file)update.imgUrl='/image/seedophoto/'+req.file.filename;
   SeeDo.findByIdAndUpdate(req.body.id,{$set:update},function (err,rtn) {
        if(err)throw err;
        else{

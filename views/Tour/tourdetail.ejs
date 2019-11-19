@@ -18,62 +18,28 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-        <h1>Tour details</h1>
-
-      categories: <%=Tour.categories %><p>
-    title: <%=Tour.title %><p>
-        content: <%=Tour.content %><p>
-
-
-    <button color="green" type="button" name="button" onclick='ch();'>delete</button>
-
-    <a href="/Tour/tourupdate/<%=Tour._id %>">  <button type="button" name="button">update</button></a>
-          <script type="text/javascript">
-      function ch(){
-        var result=confirm('are you sure');
-        if(result){
-          location.href='/Tour/tourdelete/<%= Tour._id %>';
+        <h1>Tour details</h1><br><br>
+         categories:&nbsp;&nbsp;<%=Tour.categories %><br><br><br>
+         title:&nbsp;&nbsp;<%=Tour.title %><br><br><br>
+         content:&nbsp;&nbsp;<%=Tour.content %><br><br><br>
+         Profile:&nbsp;&nbsp;<img src="<%=Tour.imgUrl%>" height="200" width="200" alt=""><br><br><br>
+        <a href="/Tour/tourupdate/<%=Tour._id %>"> <p>
+           <button type="button" name="button">Update</button></a>
+          <button type="button" onclick="ch();" name="button">Delete</button><br><br><br><br><br><br>
+        <script type="text/javascript">
+        function ch(){
+          var re=confirm("Are you sure");
+          if(re){
+            location.href='/Tour/tourdelete/<%=Tour._id %>';
+          }
         }
-      }
+        </script>
 
-      </script>
         </div>
                   <% include ../partialadmin/adminfooter %>
     <!-- Right Panel -->
   <% include ../partialadmin/adminscript %>
 </body>
-
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Tour details</h1>
-
-  categories: <%=Tour.categories %><p>
-title: <%=Tour.title %><p>
-    content: <%=Tour.content %><p>
-
-
-<button color="green" type="button" name="button" onclick='ch();'>delete</button>
-
-<a href="/Tour/tourupdate/<%=Tour._id %>">  <button type="button" name="button">update</button></a>
-  </body>
-  <script type="text/javascript">
-  function ch(){
-    var result=confirm('are you sure');
-    if(result){
-      location.href='/Tour/tourdelete/<%= Tour._id %>';
-    }
-  }
-
-  </script>
-</html> -->

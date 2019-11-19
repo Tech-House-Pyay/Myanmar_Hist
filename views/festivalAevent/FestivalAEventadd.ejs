@@ -19,21 +19,22 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-        <h1>Festival and event Add</h1>
-        <form class="" action="/festivalAevent/faeventadd" method="post">
-          <label for="categories">Categories</label><p>
+        <h1>Festival & event Add</h1><br><br>
+        <form class="" action="/festivalAevent/faeventadd" method="post" enctype="multipart/form-data">
+          <label for="categories">Categories</label><br>
             <select class="" id="categories" data-style="btn-info" name="categories">
               <option value="Festival">Festival</option>
               <option value="Event">Event</option>
-
-              </select><p>
-            <label for="title">title</label><p>
-              <input type="text" name="title" id="title" value=""><br>
-              <label for="content">Content</label><p>
-                <textarea name="content" id="content" rows="8" cols="80"></textarea><br>
-                <button type="submit" name="button">Add</button>
+              </select><br><br>
+            <label for="title">Title</label><br>
+              <input type="text" name="title" id="title" value=""><br><br>
+              <label for="content">Content</label><br>
+                <textarea name="content" id="content" rows="8" cols="80"></textarea><br><br>
+                <label for="photo">Profile</label><br>
+                <input type="file" name="photo" value=""><p><br><br>
+                <button type="submit" name="button">Add</button><br><br>
 
         </form>
 

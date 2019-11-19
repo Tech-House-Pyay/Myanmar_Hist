@@ -18,24 +18,24 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-        <h1>See and Do Details</h1>
-        Categories:<%= seeAdo.categories %><p>
-        Title:<%= seeAdo.title %><p>
-        Content:<%= seeAdo.content %><P>
-        Profile:<img src="<%=seeAdo.imgUrl%>" height="200" width="200" alt="">
-          <a href="/seeAdo/seeAdoupdate/<%=seeAdo._id%>"><button type="button" name="button">Update</button></a>
-          <button type="button" onclick="ch();"" name="button">Delete</button>
+        <h1>See & Do Details</h1><br>
+        Categories:&nbsp;&nbsp;<%= seeAdo.categories %><br><br><br>
+        Title:&nbsp;&nbsp;<%= seeAdo.title %><br><br><br>
+        Content:&nbsp;&nbsp;<%= seeAdo.content %><br><br><br>
+        Profile:<img src="<%=seeAdo.imgUrl%>" height="200" width="200" alt=""><br><br><br>
+        <a href="/seeAdo/seeAdoupdate/<%=seeAdo._id%>"><button type="button" name="button">Update</button></a>
+        <button type="button" onclick="ch();" name="button">Delete</button><br><br><br><br><br>
 
-      <script type="text/javascript">
+        <script type="text/javascript">
         function ch(){
           var re=confirm("Are you sure");
           if(re){
             location.href="/seeAdo/seeAdodelete/<%=seeAdo._id%>";
           }
         }
-      </script>
+        </script>
 
         </div>
                   <% include ../partialadmin/adminfooter %>

@@ -1,16 +1,21 @@
 var express=require('express');
 var router=express.Router();
-var Tour=require('../model/tours');
+var Tour=require('../model/tour');
+var multer=require('multer');
+var upload=multer({dest:'public/image/tourphoto'});
+
 
 router.get('/tourA',function (req,res) {
   res.render('Tour/touradd');
 
 });
-router.post('/tourA',function (req,res) {
+router.post('/tourA',upload.single('photo'),function (req,res) {
+  console.log(req.body);
   var sd=new Tour();
   sd.categories=req.body.categories;
   sd.title=req.body.title;
   sd.content=req.body.content;
+  if(req.file) sd.imgUrl='/image/tourphoto/'+req.file.filename;
   sd.save(function (err,rtn) {
     if(err)throw err;
     console.log(rtn);
@@ -51,12 +56,13 @@ router.get('/tourupdate/:id',function (req,res) {
   });
 
 });
-router.post('/tourupdate',function (req,res) {
+router.post('/tourupdate',upload.single('photo'),function (req,res) {
   var update={
     categories:req.body.categories,
     title:req.body.title,
     content:req.body.content
   }
+  if(req.file) update.imgUrl='/image/tourphoto/'+req.file.filename;
 Tour.findByIdAndUpdate(req.body.id,{$set:update},function (err,rtn) {
        if(err)throw err;
        else{

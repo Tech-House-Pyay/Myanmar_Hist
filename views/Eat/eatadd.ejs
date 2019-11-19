@@ -18,26 +18,23 @@
 
         <!-- Header-->
       <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+      <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
-        <h1>Eat Add</h1>
-        <form class="" action="/Eat/eat" method="post">
-
-
-        <label for="categories">Category</label>
+        <h1>Eat & Drink</h1><br><br>
+        <form class="" action="/Eat/eat" method="post" enctype="multipart/form-data">
+        <label for="categories">Category</label><br>
         <select class="categories" name="categories">
           <option value="Eat">Eat</option>
         <option value="Drink">Drink</option>
+        </select><br><br><br>
+        <label for="title">Title</label><br>
+        <input type="text" name="title" id="title" value=""><br><br><br>
+        <label for="content">Content</label><br>
+        <textarea name="content" id="content" rows="8" cols="80"></textarea><br><br><br>
+        <label for="photo">Profile</label><br>
+        <input type="file" name="photo" value=""><br><br><br>
 
-        </select><p>
-
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value=""><br><br>
-
-        <label for="content">Content</label>
-        <input type="text" name="content" id="content" value=""><br><br>
-
-        <button type="submit" name="submit">Eat Add</button>
+        <button type="submit" name="submit">Add</button><br><br><br>
         </form>
         </div>
                   <% include ../partialadmin/adminfooter %>
