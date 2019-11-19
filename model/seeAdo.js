@@ -14,6 +14,10 @@ var seedoSchema=new Schema({
   content:{
     type:String,
     required:true
+  },
+  imgUrl:{
+    type:String,
+    required:true
   }
 });
 module.exports=mongoose.model('seeAdo',seedoSchema);

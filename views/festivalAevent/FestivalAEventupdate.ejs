@@ -1,5 +1,5 @@
 
-<!-- <!doctype html>
+<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -8,44 +8,66 @@
 <!--<![endif]-->
 
 <% include ../partialadmin/adminhead %>
+
 <body>
     <!-- Left Panel -->
-    <% include ../partialadmin/adminsidebar %>
+
+<% include ../partialadmin/adminsidebar %>
+
     <!-- Left Panel -->
 
     <!-- Right Panel -->
-
-    <div id="left-panel" class="left-panel">
-
-        <!-- Header-->
-      <% include ../partialadmin/admintopbar %>
-      <div class="col-sm-12">
+<!-- /header -->
         <!-- Header-->
 
-        <h1>Festival and Event Update</h1>
-        <form class="" action="/festivalAevent/faeventupdate" method="post">
-          <input type="hidden" name="id" value="<%=festivalAevent._id%>">
-          <label for="categories">Categories</label><p>
-              <select class="" id="categories" data-style="btn-info" name="categories">
-                <option value="Festival">Festival</option>
-                <option value="Event">Event</option>
+  <% include ../partialadmin/admintopbar %>
 
-                </select><p>
-            <label for="title">title</label><p>
-              <input type="text" name="title" id="title" value="<%=festivalAevent._title%>"><br>
-              <label for="content">Content</label><p>
-                <textarea name="content" id="content" rows="8" cols="80"><%=festivalAevent._content%></textarea><br>
-                <button type="submit" name="button">Add</button>
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
 
-        </form>
-        </div>
-                  <% include ../partialadmin/adminfooter %>
+                    <div class="col-md-12 bg-danger text-white">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white">
+                                <strong class="card-title">Festival & Event Update</strong>
+                            </div>
+                            <div class="card-body">
+                              <h1>Festival & Event Update</h1><br><br>
+                              <form class="" action="/festivalAevent/faeventupdate" method="post">
+                                <input type="hidden" name="id" value="<%=festivalAevent._id%>">
+                                <label for="categories">Categories</label><br>
+                                <select class="" id="categories" data-style="btn-info" name="categories">
+                                  <option value="Festival">Festival</option>
+                                  <option value="Event">Event</option>
+                                </select><br><br><br>
+                                 <label for="title">Title</label><br>
+                                 <input type="text" name="title" id="title" value="<%=festivalAevent.title%>"><br><br><br>
+                                 <label for="content">Content</label><br>
+                                 <textarea name="content" id="content" rows="8" cols="80"><%=festivalAevent.content %></textarea><br><br>
+                                 <label for="photo">profile</label><br>
+                                 <input type="file" name="photo" value=""><br><br><br>
+                                 <button type="submit" name="submit">Update</button><br><br><br>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
     <!-- Right Panel -->
+
+
   <% include ../partialadmin/adminscript %>
+
 </body>
 
 </html>
-
 
 
 
