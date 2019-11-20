@@ -54,7 +54,7 @@ router.get('/seeAdoupdate/:id',function (req,res) {
   });
 
 });
-router.post('/seeAdoupdate',function (req,res) {
+router.post('/seeAdoupdate',upload.single('photo'),function (req,res) {
   var update={
     categories:req.body.categories,
     title:req.body.title,
