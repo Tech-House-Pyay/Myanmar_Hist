@@ -20,7 +20,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://127.0.0.1/Myanmar');
+mongoose.connect('mongodb+srv://Mhwayei:<password>@myanhistcluster-r6gwb.mongodb.net/test?retryWrites=true&w=majority');
 var db=mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection server:'));
 
