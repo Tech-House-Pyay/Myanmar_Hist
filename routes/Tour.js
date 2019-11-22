@@ -1,6 +1,7 @@
 var express=require('express');
 var router=express.Router();
 var Tour=require('../model/tour');
+var Admin=require('../model/Admin');
 var multer=require('multer');
 var upload=multer({dest:'public/image/tourphoto'});
 

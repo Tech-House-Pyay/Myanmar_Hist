@@ -1,6 +1,7 @@
 var express=require('express');
 var router=express.Router();
 var FE=require('../model/festivalAevent');
+var Admin=require('../model/Admin');
 var multer=require('multer');
 var upload=multer({dest:'public/image/festivalphoto'});
 

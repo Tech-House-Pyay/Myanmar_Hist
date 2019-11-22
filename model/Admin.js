@@ -16,5 +16,14 @@ var AdminSchema=new Schema({
   required:true
 }
 });
+AdminSchema.pre('save',function (next) {
+  this.password=bcrypt.hashSync(this.password,bcrypt.genSaltSync(8),null);
+  next();
 
-module.exports=mongoose.model('Admins',AdminSchema);
+
+});
+AdminSchema.statics.compare=function (cleartext,encrypted) {
+  return bcrypt.compareSync(cleartext,encrypted);
+
+}
+module.exports=mongoose.model('Admin',AdminSchema);

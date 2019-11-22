@@ -1,0 +1,97 @@
+<<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<%include partialadmin/adminhead %>
+
+<body class="bg-dark">
+
+
+    <div class="sufee-login d-flex align-content-center flex-wrap">
+        <div class="container">
+            <div class="login-content">
+                <div class="login-logo">
+                    <a href="index.html">
+                        <img class="align-content" src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="login-form">
+                    <form action="/signup" id="signupform" name="frm" method="post">
+                        <div class="form-group">
+                            <label for="name">Admin Name</label>
+                            <input type="name" id="name" name="name" class="form-control" placeholder="Admin Name" required>
+                        </div>
+                            <div class="form-group">
+                                <label for="email">Admin Email </label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Admin Email" required>
+                        </div>
+                                <div class="form-group">
+                                    <label for="password">Admin Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Admin Password" required>
+                        </div>
+
+
+                                    <button type="submit" onclick="check();" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                                    <div class="social-login-content">
+
+                                    </div>
+                                    <div class="register-link m-t-15 text-center">
+                                        <p>Already have account ? <a href="/signin"> Sign in</a></p>
+                                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <% include partialadmin/adminscript %>
+
+
+<script src="/javascripts/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="/javascripts/jquery.validate.min.js" charset="utf-8"></script>
+</body>
+<script type="text/javascript">
+$('#email').blur(function () {
+var datad={email:$('#email').val()};
+console.log('calling',datad);
+$.ajax({url:'/duemail',data:datad,type:'POST',
+success:function (result) {
+if(result.status)
+{
+alert('Email is already exit or email is validate');
+$('#email').val('');
+$('#email').focus();
+}
+}
+
+});
+
+});
+function check() {
+var datap={password:$('#password').val()};
+$.ajax({url:'/checka',data:datap,type:'POST',
+success:function (result) {
+if(!result.status){
+  alert('Password is not validate');
+  $('#password').val('');
+  $('#password').focus();
+}else{
+  frm.submit();
+}
+
+}
+
+})
+
+}
+$('#signupform').validate();
+</script>
+</html>
