@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose=require('mongoose');
+var session=require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -28,17 +29,39 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: "chichi1209",
+  resave:false,
+  saveUnintialized:true
+}));
 
+app.use(function (req,res,next) {
+  res.locals.sd=req.session.sd
+  next();
+
+});
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
+app.use(function (req,res,next) {
+  if(req.session.sd){
+  next();
+  }else{
+    res.redirect('/signin');
+  }
+});
 app.use('/admin',adminRouter);
+
 app.use('/seeAdo',seedoRouter);
 app.use('/eat',eatRouter);
 app.use('/festivalAevent',eventRouter);
 app.use('/travelleressential',teRouter);
 app.use('/Tour',tourRouter);
+app.use('/users', usersRouter);
+
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,6 +1,7 @@
 var express=require('express');
 var router=express.Router();
 var SeeDo=require('../model/seeAdo');
+var Admin=require('../model/Admin');
 var multer=require('multer');
 var upload=multer({dest:'public/image/seedophoto'});
 router.get('/seeAdoadd',function (req,res) {
