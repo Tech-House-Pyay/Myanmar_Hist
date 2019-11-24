@@ -19,8 +19,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-mongoose.connect('mongodb+srv://Mhwayei:<Mhway@1541999>@myanhistcluster-r6gwb.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://naychi:naychi1234@cluster0-7sbtq.mongodb.net/test?retryWrites=true&w=majority');
 var db=mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection server:'));
 
@@ -29,8 +28,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
-  secret: "chichi1209",
+  secret: "chichi12019",
   resave:false,
   saveUnintialized:true
 }));
