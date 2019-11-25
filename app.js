@@ -36,7 +36,7 @@ app.use(session({
 }));
 
 app.use(function (req,res,next) {
-  res.locals.sd=req.session.sd
+  res.locals.admin=req.session.admin
   next();
 
 });
@@ -44,7 +44,7 @@ app.use(function (req,res,next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use(function (req,res,next) {
-  if(req.session.sd){
+  if(req.session.admin){
   next();
   }else{
     res.redirect('/signin');
