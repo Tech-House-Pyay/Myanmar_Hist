@@ -2,24 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>home</title>
+    <title>Traveller Essential</title>
   </head>
   <body>
+    <h1>Traveller Essential</h1>
     <table>
       <thead>
-        <th>Categories</th>
         <th>Title</th>
         <th>Content</th>
         <th>Image</th>
       </thead>
       <tbody>
-        <% for(var i = 0; i < see.length; i++){%>
+        <% for (var i=0; i<traveller.length; i++){%>
           <tr>
-            <td><%= see[i].categories %></td>
-            <td><%= see[i].title %></td>
-            <td><%= see[i].content %></td>
-            <td><%= see[i].imgUrl %></td>
+            <td><%=traveller.title %></td>
+            <td><%=traveller.content %></td>
+            <td><%=traveller.imgUrl %></td>
           </tr>
+
         <%}%>
       </tbody>
     </table>

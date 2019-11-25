@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>home</title>
+    <title>Festival And Event</title>
   </head>
   <body>
+    <h1>Festival and event</h1>
     <table>
       <thead>
         <th>Categories</th>
@@ -13,13 +14,14 @@
         <th>Image</th>
       </thead>
       <tbody>
-        <% for(var i = 0; i < see.length; i++){%>
+        <% for (var i=0; i<festival.length; i++){%>
           <tr>
-            <td><%= see[i].categories %></td>
-            <td><%= see[i].title %></td>
-            <td><%= see[i].content %></td>
-            <td><%= see[i].imgUrl %></td>
+            <td><%=festival.categories %></td>
+            <td><%=festival.title %></td>
+            <td><%=festival.content %></td>
+            <td><%=festival.imgUrl %></td>
           </tr>
+
         <%}%>
       </tbody>
     </table>
