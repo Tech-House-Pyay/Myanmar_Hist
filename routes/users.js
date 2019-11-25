@@ -4,6 +4,7 @@ var Eat=require('../model/eatAdrink');
 var See = require('../model/seeAdo');
 var Festival=require('../model/festivalAevent');
 var Traveller=require('../model/travelleressential');
+var Tour=require('../model/tour');
 /* GET users listing. */
 router.get('/home', function(req, res, next) {
   See.find(function (err,rtn) {
@@ -25,5 +26,11 @@ Traveller.find(function (err,rtn) {
     res.render('users/travellerhome',{traveller:rtn})
   })
 
+});
+router.get('/tour',function (req ,res, next) {
+  Tour.find(function(err,rtn){
+    if(err) throw err;
+    res.render('users/tour',{tour:rtn})
+  })
 });
 module.exports = router;
