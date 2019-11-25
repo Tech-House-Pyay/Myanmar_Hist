@@ -52,7 +52,7 @@ router.post('/signin',function (req,res) {
     console.log(admin);
     console.log(req.body.password);
     if(admin !=null && Admin.compare(req.body.password,admin.password)){
-      req.session.sd={name:admin.name,email:admin.email,id:admin._id}
+      req.session.admin={name:admin.name,email:admin.email,id:admin._id}
       res.redirect('/admin')
     }else {
       res.redirect('/signin')
