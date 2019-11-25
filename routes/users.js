@@ -19,10 +19,10 @@ Festival.find(function (err,rtn) {
   })
 
 });
-router.get('/festivalhome', function(req, res, next) {
+router.get('/travellerhome', function(req, res, next) {
 Traveller.find(function (err,rtn) {
     if(err) throw err;
-    res.render('users/festivalhome',{traveller:rtn})
+    res.render('users/travellerhome',{traveller:rtn})
   })
 
 });
