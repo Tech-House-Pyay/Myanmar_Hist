@@ -75,6 +75,6 @@ router.post('/duemail',function (req,res) {
 })
 router.post('/checka',function (req,res) {
   var sta=schema.validate(req.body.password);
-  res.json({status:sta})
+  res.json({status:sta});
 });
 module.exports=router;
