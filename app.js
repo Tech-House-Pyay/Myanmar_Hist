@@ -42,6 +42,11 @@ app.use(function (req,res,next) {
 });
 
 app.use('/', indexRouter);
+app.use('/seeAdo',seedoRouter);
+app.use('/eat',eatRouter);
+app.use('/festivalAevent',eventRouter);
+app.use('/travelleressential',teRouter);
+app.use('/Tour',tourRouter);
 app.use('/users', usersRouter);
 app.use(function (req,res,next) {
   if(req.session.admin){
@@ -51,18 +56,6 @@ app.use(function (req,res,next) {
   }
 });
 app.use('/admin',adminRouter);
-
-app.use('/seeAdo',seedoRouter);
-app.use('/eat',eatRouter);
-app.use('/festivalAevent',eventRouter);
-app.use('/travelleressential',teRouter);
-app.use('/Tour',tourRouter);
-
-
-
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
