@@ -35,9 +35,12 @@ router.get('/tour',function (req ,res, next) {
 });
 
 router.get('/eathome',function (req ,res, next) {
-  Eat.find(function(err,rtn){
+  var query={categories:'Eat'};
+  Eat.find(query,function(err,rtn){
     if(err) throw err;
     res.render('users/eathome',{eat:rtn})
-  })
+
+});
+
 });
 module.exports = router;
