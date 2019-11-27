@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>home</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>Cat</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Img</th>
+      </thead>
+      <tbody>
+        <% for(var i = 0; i < see.length; i++){%>
+          <tr>
+            <td><%= see[i].categories %></td>
+            <td><%= see[i].title %></td>
+            <td><%= see[i].content %></td>
+            <td><%= see[i].imgUrl %></td>
+          </tr>
+        <%}%>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>EAt And Drink</title>
+    <title>Tour</title>
   </head>
   <body>
-    <h1>eat and drink</h1>
+    <h1>Tour</h1>
     <table>
       <thead>
         <th>Categories</th>
@@ -14,14 +14,13 @@
         <th>Image</th>
       </thead>
       <tbody>
-        <% for (var i=0; i<eat.length; i++){%>
+        <% for(var i = 0; i < tour.length; i++){%>
           <tr>
-            <td><%=eat[i].categories %></td>
-            <td><%=eat[i].title %></td>
-            <td><%=eat[i].content %></td>
-            <td><%=eat[i].imgUrl %></td>
+            <td><%= tour[i].categories %></td>
+            <td><%= tour[i].title %></td>
+            <td><%= tour[i].content %></td>
+            <td><%= tour[i].imgUrl %></td>
           </tr>
-
         <%}%>
       </tbody>
     </table>
