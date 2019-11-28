@@ -1,4 +1,138 @@
-<!DOCTYPE html>
+
+<!doctype html>
+<html lang="en">
+
+<% include ../partialuser/head %>
+
+<body>
+
+	<!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<% include ../partialuser/navbar %>
+
+			<div class="search_input" id="search_input_box">
+				<div class="container">
+					<form class="d-flex justify-content-between">
+						<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+						<button type="submit" class="btn"></button>
+						<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--================ End Header Menu Area =================-->
+
+	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row fullscreen d-flex align-items-center justify-content-center">
+					<div class="banner_content">
+						<p>Plan a trip to Santorini Village</p>
+						<h2>Taxa Adventure</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start Feature Area =================-->
+	<section class="feature-area section_gap_top">
+		<div class="container">
+			<div class="row align-items-end justify-content-center">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<p>We’re Offering these Popular Services</p>
+						<h1>Getting Adventure with Services</h1>
+						<span class="title-widget-bg"></span>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+				<!-- single-feature -->
+				<div class="col-sm-3 col-md-6 ">
+					<div class="single-feature">
+						<div class="feature-details">
+              <!-- <table style="width:150%">
+                <thead>
+                  <th>Category</th>
+                  <th>Title</th>
+                  <th>Content</th>
+                  <th>Img</th>
+                </thead>
+                <tbody> -->
+                  <!-- <% for(var i = 0; i < see.length; i++){%> -->
+                    <!-- <tr> -->
+											
+          <strong>Categories</strong>:<%= see[0].categories %><br><br>
+            <strong>  Title</strong>:<%= see[0].title %><br><br>
+                      Content: <%= see[0].content %><br><br>
+											<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+                      Image: <%= see[0].imgUrl %>
+                    <!-- </tr> -->
+                  <!-- <%}%> -->
+                <!-- </tbody>
+              </table> -->
+
+
+						</div>
+						<div class="feature-thumb">
+							<img class="img-fluid" src="img/service/s1.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- single-feature -->
+				<div class="col-sm-6 col-md-6 bg-success">
+					<div class="single-feature">
+						<div class="feature-details">
+							Categories: <%= see[1].categories %><br><br>
+							Title: <%= see[1].title %><br><br>
+										Content: <%= see[1].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+										Image: <%= see[1].imgUrl %>
+						</div>
+						<div class="feature-thumb">
+							<img class="img-fluid" src="img/service/s2.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- single-feature -->
+				<div class="col-lg-4 col-md-6">
+					<div class="single-feature">
+						<div class="feature-details">
+							<h5>Forest Exploration <br>
+								with Energy Package</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consecter adipisicing elit, sed do eiusmod tempor incididunt.
+							</p>
+							<a href="#" class="primary-btn mb-40">Read More</a>
+						</div>
+						<div class="feature-thumb">
+							<img class="img-fluid" src="img/service/s3.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Feature Area =================-->
+
+	<!--================ Start CTA Area =================-->
+
+	<!--================ End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<% include ../partialuser/script %>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -24,4 +158,4 @@
       </tbody>
     </table>
   </body>
-</html>
+</html> -->
