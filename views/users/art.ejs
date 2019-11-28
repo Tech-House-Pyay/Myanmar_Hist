@@ -10,24 +10,16 @@
 			<% include ../partialuser/navbar %>
 
 
-	<!--================ End Header Menu Area =================-->
-
-	<!--================ Start Home Banner Area =================-->
-
-	<!--================ End Home Banner Area =================-->
-
-	<!--================ Start Feature Area =================-->
-
-	<section class="home_banner_area section_gap_top" >
+<section class="home_banner_area section_gap_top" >
 	<h3 align='center'> The Arts of Myanmar</h3>
       <div class="row">
 				<div class="col-sm-4 col-md-6 ">
 					<div class="single-feature bg-warning">
 						<div class="feature-details">
-						 <%= see[0].categories %><br><br>
-						 <%= see[0].title %><br><br>
-										<%= see[0].content %><br><br>
-										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+						 <h6><%= see[0].categories %></h6><br><br>
+						 <h6><%= see[0].title %></h6><br><br>
+										<h6><%= see[0].content %></h6><br><br>
+										<a href="#" class="primary-btn mb-40"><h6>Read More</h6></a><br><br>
 									 <%= see[1].imgUrl %>
 						</div>
 
@@ -38,10 +30,10 @@
 						<div class="col-sm-4 col-md-6 ">
 							<div class="single-feature bg-primary">
 								<div class="feature-details">
-								<%= see[1].categories %><br><br>
-								<%= see[1].title %><br><br>
-											<%= see[1].content %><br><br>
-												<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+								<h6><%= see[1].categories %></h6><br><br>
+								<h6><%= see[1].title %></h6><br><br>
+											<h6><%= see[1].content %></h6><br><br>
+												<a href="#" class="primary-btn mb-40"><h6>Read More</h6></a><br><br>
 												<%= see[1].imgUrl %>
 								</div>
 
@@ -52,10 +44,10 @@
 				<div class="col-sm-4 col-md-6">
 					<div class="single-feature bg-danger">
 						<div class="feature-details">
-							 <%= see[2].categories %><br><br>
-							 <%= see[2].title %><br><br>
-										<%= see[2].content %><br><br>
-										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+							 <h6><%= see[2].categories %></h6><br><br>
+							 <h6><%= see[2].title %></h6><br><br>
+										<h6><%= see[2].content %></h6><br><br>
+										<a href="#" class="primary-btn mb-40"><h6>Read More</h6></a><br><br>
 									 <%= see[2].imgUrl %>
 						</div>
 
@@ -64,43 +56,8 @@
 			</div>
 		</div>
 	</section>
-	<!--================ End Feature Area =================-->
 
-	<!--================ Start CTA Area =================-->
-
-	<!--================ End Footer Area =================-->
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <% include ../partialuser/script %>
 </body>
 
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>home</title>
-  </head>
-  <body>
-    <table>
-      <thead>
-        <th>Cat</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Img</th>
-      </thead>
-      <tbody>
-        <% for(var i = 0; i < see.length; i++){%>
-          <tr>
-            <td><%= see[i].categories %></td>
-            <td><%= see[i].title %></td>
-            <td><%= see[i].content %></td>
-            <td><%= see[i].imgUrl %></td>
-          </tr>
-        <%}%>
-      </tbody>
-    </table>
-  </body>
-</html> -->
