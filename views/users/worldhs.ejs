@@ -1,28 +1,78 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Tour</title>
-  </head>
-  <body>
-    <h1>Tour</h1>
-    <table>
-      <thead>
-        <th>Categories</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Image</th>
-      </thead>
-      <tbody>
-        <% for(var i = 0; i < tour.length; i++){%>
-          <tr>
-            <td><%= tour[i].categories %></td>
-            <td><%= tour[i].title %></td>
-            <td><%= tour[i].content %></td>
-            <td><%= tour[i].imgUrl %></td>
-          </tr>
-        <%}%>
-      </tbody>
-    </table>
-  </body>
+
+<!doctype html>
+<html lang="en">
+
+<% include ../partialuser/head %>
+
+<body>
+
+
+			<% include ../partialuser/navbar %>
+
+
+	<!--================ End Header Menu Area =================-->
+
+	<!--================ Start Home Banner Area =================-->
+
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start Feature Area =================-->
+
+	<section class="home_banner_area section_gap_top" >
+	<h3 align='center'>World heritage sites of Myanmar</h3>
+      <div class="row">
+				<div class="col-sm-4 col-md-6 ">
+					<div class="single-feature bg-warning">
+						<div class="feature-details">
+						 <%= tour[0].categories %><br><br>
+						 <%= tour[0].title %><br><br>
+										<%= tour[0].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+									 <%= tour[1].imgUrl %>
+						</div>
+
+
+
+				</div>
+			</div>
+						<div class="col-sm-4 col-md-6 ">
+							<div class="single-feature bg-primary">
+								<div class="feature-details">
+								<%= tour[1].categories %><br><br>
+								<%= tour[1].title %><br><br>
+											<%= tour[1].content %><br><br>
+												<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+												<%= tour[1].imgUrl %>
+								</div>
+
+
+						</div>
+					</div>
+				<!-- single-feature -->
+				<div class="col-sm-4 col-md-6">
+					<div class="single-feature bg-danger">
+						<div class="feature-details">
+							 <%= tour[2].categories %><br><br>
+							 <%= tour[2].title %><br><br>
+										<%= tour[2].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+									 <%= tour[2].imgUrl %>
+						</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Feature Area =================-->
+
+	<!--================ Start CTA Area =================-->
+
+	<!--================ End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<% include ../partialuser/script %>
+</body>
+
 </html>

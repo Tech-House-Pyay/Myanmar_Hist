@@ -1,29 +1,77 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>EAt And Drink</title>
-  </head>
-  <body>
-    <h1>eat and drink</h1>
-    <table>
-      <thead>
-        <th>Categories</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Image</th>
-      </thead>
-      <tbody>
-        <% for (var i=0; i<eat.length; i++){%>
-          <tr>
-            <td><%=eat[i].categories %></td>
-            <td><%=eat[i].title %></td>
-            <td><%=eat[i].content %></td>
-            <td><%=eat[i].imgUrl %></td>
-          </tr>
+<!doctype html>
+<html lang="en">
 
-        <%}%>
-      </tbody>
-    </table>
-  </body>
+<% include ../partialuser/head %>
+
+<body>
+
+
+			<% include ../partialuser/navbar %>
+
+
+	<!--================ End Header Menu Area =================-->
+
+	<!--================ Start Home Banner Area =================-->
+
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start Feature Area =================-->
+
+	<section class="home_banner_area section_gap_top" >
+	<h3 align='center'> Drink of Myanmar</h3>
+      <div class="row">
+				<div class="col-sm-4 col-md-6 ">
+					<div class="single-feature bg-warning">
+						<div class="feature-details">
+						 <%= eat[0].categories %><br><br>
+						 <%= eat[0].title %><br><br>
+										<%= eat[0].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+									 <%= eat[0].imgUrl %>
+						</div>
+
+
+
+				</div>
+			</div>
+						<div class="col-sm-4 col-md-6 ">
+							<div class="single-feature bg-primary">
+								<div class="feature-details">
+								<%= eat[1].categories %><br><br>
+								<%= eat[1].title %><br><br>
+											<%= eat[1].content %><br><br>
+												<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+												<%= eat[1].imgUrl %>
+								</div>
+
+
+						</div>
+					</div>
+				<!-- single-feature -->
+				<div class="col-sm-4 col-md-6">
+					<div class="single-feature bg-danger">
+						<div class="feature-details">
+							 <%= eat[2].categories %><br><br>
+							 <%= eat[2].title %><br><br>
+										<%= eat[2].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+									 <%= eat[2].imgUrl %>
+						</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Feature Area =================-->
+
+	<!--================ Start CTA Area =================-->
+
+	<!--================ End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<% include ../partialuser/script %>
+</body>
+
 </html>

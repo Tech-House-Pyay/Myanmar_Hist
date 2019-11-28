@@ -1,29 +1,78 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Festival And Event</title>
-  </head>
-  <body>
-    <h1>Festival and event</h1>
-    <table>
-      <thead>
-        <th>Categories</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Image</th>
-      </thead>
-      <tbody>
-        <% for (var i=0; i<festival.length; i++){%>
-          <tr>
-            <td><%=festival[i].categories %></td>
-            <td><%=festival[i].title %></td>
-            <td><%=festival[i].content %></td>
-            <td><%=festival[i].imgUrl %></td>
-          </tr>
 
-        <%}%>
-      </tbody>
-    </table>
-  </body>
+<!doctype html>
+<html lang="en">
+
+<% include ../partialuser/head %>
+
+<body>
+
+
+			<% include ../partialuser/navbar %>
+
+
+	<!--================ End Header Menu Area =================-->
+
+	<!--================ Start Home Banner Area =================-->
+
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start Feature Area =================-->
+
+	<section class="home_banner_area section_gap_top" >
+	<h3 align='center'>Events of Myanmar</h3>
+      <div class="row">
+				<div class="col-sm-4 col-md-6 ">
+					<div class="single-feature bg-warning">
+						<div class="feature-details">
+						 <%= festival[0].categories %><br><br>
+						 <%= festival[0].title %><br><br>
+										<%= festival[0].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+									 <%= festival[1].imgUrl %>
+						</div>
+
+
+
+				</div>
+			</div>
+						<div class="col-sm-4 col-md-6 ">
+							<div class="single-feature bg-primary">
+								<div class="feature-details">
+								<%= festival[1].categories %><br><br>
+								<%= festival[1].title %><br><br>
+											<%= festival[1].content %><br><br>
+												<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+												<%= festival[1].imgUrl %>
+								</div>
+
+
+						</div>
+					</div>
+				<!-- single-feature -->
+				<div class="col-sm-4 col-md-6">
+					<div class="single-feature bg-danger">
+						<div class="feature-details">
+							 <%= festival[2].categories %><br><br>
+							 <%= festival[2].title %><br><br>
+										<%= festival[2].content %><br><br>
+										<a href="#" class="primary-btn mb-40">Read More</a><br><br>
+									 <%= festival[2].imgUrl %>
+						</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Feature Area =================-->
+
+	<!--================ Start CTA Area =================-->
+
+	<!--================ End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<% include ../partialuser/script %>
+</body>
+
 </html>
