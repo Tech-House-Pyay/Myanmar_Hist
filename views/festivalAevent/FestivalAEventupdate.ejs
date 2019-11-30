@@ -33,7 +33,7 @@
                             </div>
                             <div class="card-body bg-danger text-white">
                               <h1>Festival & Event Update</h1><br><br>
-                              <form class="" action="/festivalAevent/faeventupdate" method="post">
+                              <form class="" action="/festivalAevent/faeventupdate" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="id" value="<%=festivalAevent._id%>">
                                 <label for="categories">Categories</label><br>
                                 <select class="" id="categories" data-style="btn-info" name="categories">
@@ -45,7 +45,7 @@
                                  <label for="content">Content</label><br>
                                  <textarea name="content" id="content" rows="8" cols="80"><%=festivalAevent.content %></textarea><br><br>
                                  <label for="photo">Photo</label><br>
-                                 <input type="file" name="photo" value=""><br><br><br>
+                                 <input type="file" name="photo" value="<%=festivalAevent.imgUrl %>"><br><br><br>
                                  <button type="submit" name="submit">Update</button><br><br><br>
                               </form>
                             </div>

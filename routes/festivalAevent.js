@@ -44,7 +44,7 @@ router.get('/faeventdetail/:id',function (req,res) {
   });
 
 });
-router.get('/faeventupdate/:id',upload.single('photo'),function (req,res) {
+router.get('/faeventupdate/:id',function (req,res) {
   FE.findById(req.params.id,function (err,rtn) {
     if(err)throw err;
     res.render('festivalAevent/FestivalAEventupdate',{festivalAevent:rtn})
@@ -52,7 +52,7 @@ router.get('/faeventupdate/:id',upload.single('photo'),function (req,res) {
   });
 
 });
-router.post('/faeventupdate',function (req,res) {
+router.post('/faeventupdate',upload.single('photo'),function (req,res) {
   var update={
     categories:req.body.categories,
     title:req.body.title,
@@ -61,6 +61,7 @@ router.post('/faeventupdate',function (req,res) {
   if(req.file) update.imgUrl='/image/festivalphoto/'+req.file.filename;
   FE.findByIdAndUpdate(req.body.id,{$set:update},function (err,rtn) {
     if(err)throw err;
+    console.log("rrrr");
     res.redirect('/festivalAevent/faeventdetail/'+req.body.id);
 
   });

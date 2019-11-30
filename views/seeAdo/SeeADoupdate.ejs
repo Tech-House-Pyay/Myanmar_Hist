@@ -22,7 +22,7 @@
       <div class="col-sm-12 bg-danger text-white">
         <!-- Header-->
         <h1>See & Do Update</h1><br><br>
-        <form class="" action="/seeAdo/seeAdoupdate" method="post">
+        <form class="" action="/seeAdo/seeAdoupdate" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" value="<%=seeAdo._id%>">
           <label for="categories">Categories</label><br>
             <select class="" id="categories" data-style="btn-info" name="categories">
@@ -37,7 +37,7 @@
           <label for="content">Content</label><br>
           <textarea name="content" id="content" rows="8" cols="80"><%=seeAdo.content %></textarea><br><br>
           <label for="photo">Photo</label><br>
-          <input type="file" name="photo" value=""><br><br><br>
+          <input type="file" name="photo" value="<%=seeAdo.imgUrl%>"><br><br><br>
           <button type="submit" name="submit">Update</button><br><br>
         </form>
         </div>
