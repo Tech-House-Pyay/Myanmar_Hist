@@ -8,19 +8,11 @@ var Tour=require('../model/tour');
 var Travelleressential=require('../model/travelleressential');
 var isemail=require('isemail');
 var passwordValidator=require('password-validator');
-var schema=new passwordValidator();
 
 
 
 
-schema
-.is().min(8)
-.is().max(100)
-.has().uppercase()
-.has().lowercase()
-.has().digits()
-.has().not().spaces()
-.is().not().oneOf(['passw0rd','Password123']);
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -76,5 +68,15 @@ router.post('/duemail',function (req,res) {
 router.post('/checka',function (req,res) {
   var sta=schema.validate(req.body.password);
   res.json({status:sta});
+var schema=new passwordValidator();
+schema
+.is().min(8)
+.is().max(100)
+.has().uppercase()
+.has().lowercase()
+.has().digits()
+.has().not().spaces()
+.is().not().oneOf(['Passw0rd', 'Password123']);
+res.json({status:schema.validate(req.body.password)})
 });
 module.exports=router;
