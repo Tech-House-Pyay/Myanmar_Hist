@@ -1,6 +1,7 @@
 
 <!doctype html>
-<html lang="en">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 <% include ../partialuser/head %>
 
@@ -11,52 +12,60 @@
 
 
 <section class="home_banner_area section_gap_top" >
+
 	<h3 align='center'> The Arts of Myanmar</h3>
+     <div class="container">
       <div class="row">
-				<div class="col-sm-4 col-md-6 ">
+				<div class="col-sm-4 ">
 					<div class="single-feature bg-light">
 						<div class="feature-details">
 						 <h6 class="text-danger"><%= see[0].categories %></h6><br><br>
 						 <h6 class="text-danger"><%= see[0].title %></h6><br><br>
-										<h6 class="text-danger"><%= see[0].content %></h6><br><br>
-										<a href="#" class="primary-btn mb-40"><h6 class="text-danger">Read More</h6></a><br><br>
-									 <%= see[1].imgUrl %>
+									 <h6 class="text-danger"><%= see[0].content %></h6><br><br>
+										<a href="#" class="primary-btn mb-40"> <h6 class="text-danger">Read More</h6></a><br><br>
+								<div class="feature-thumb">
+										<%= see[0].imgUrl %>
 						</div>
-
-
+</div>
 
 				</div>
 			</div>
-						<div class="col-sm-4 col-md-6 ">
+						<div class="col-sm-4 ">
 							<div class="single-feature bg-light">
 								<div class="feature-details">
 								 <h6 class="text-danger"><%= see[1].categories %></h6><br><br>
 								 <h6 class="text-danger"><%= see[1].title %></h6><br><br>
 											 <h6 class="text-danger"><%= see[1].content %></h6><br><br>
 												<a href="#" class="primary-btn mb-40"> <h6 class="text-danger">Read More</h6></a><br><br>
+                    <div class="feature-thumb">
 												<%= see[1].imgUrl %>
 								</div>
-
+</div>
 
 						</div>
 					</div>
 				<!-- single-feature -->
-				<div class="col-sm-4 col-md-6">
+				<div class="col-sm-4 ">
 					<div class="single-feature bg-light">
 						<div class="feature-details">
 							  <h6 class="text-danger"><%= see[2].categories %></h6><br><br>
 							  <h6 class="text-danger"><%= see[2].title %></h6><br><br>
 									 <h6 class="text-danger"><%= see[2].content %></h6><br><br>
 										<a href="#" class="primary-btn mb-40"> <h6 class="text-danger">Read More</h6></a><br><br>
+              <div class="feature-thumb">
 									 <%= see[2].imgUrl %>
 						</div>
-
+</div>
 
 				</div>
 			</div>
 		</div>
+	</div>
 	</section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <% include ../partialuser/script %>
 </body>
 
