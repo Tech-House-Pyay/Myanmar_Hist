@@ -75,6 +75,8 @@ $('#email').focus();
 });
 
 });
+$('#signupform').validate();
+
 function check() {
 var datap={password:$('#password').val()};
 $.ajax({url:'/checka',data:datap,type:'POST',
@@ -92,6 +94,6 @@ if(!result.status){
 })
 
 }
-$('#signupform').validate();
+
 </script>
 </html>
