@@ -1,17 +1,10 @@
-
-
-
 <!doctype html>
 <html lang="en">
 
 <% include ../partialuser/head %>
 
 <body>
-
-
 			<% include ../partialuser/navbar %>
-
-
 	<!--================ End Header Menu Area =================-->
 
 	<!--================ Start Home Banner Area =================-->
@@ -19,7 +12,6 @@
 	<!--================ End Home Banner Area =================-->
 
 	<!--================ Start Feature Area =================-->
-
 	<section class="home_banner_area section_gap_top" >
 	<h3 align='center'>Traveller Essential of Myanmar</h3>
 	<div class="container">
@@ -32,7 +24,7 @@
 								<h6 class="text-danger">	<%= traveller.content %></h6><br><br>
 										<a href="#" class="primary-btn mb-40"><h6 class="text-danger">Read More</h6></a><br><br>
 									<div class="feature-thumb">
-									 <%= traveller.imgUrl %>
+									<img src="<%= traveller.imgUrl %>" alt="" width="250" height="200">
 						</div>
 						</div>
 				</div>
@@ -45,7 +37,7 @@
 										<h6 class="text-danger"><%= traveller.content %></h6><br><br>
 												<a href="#" class="primary-btn mb-40"><h6 class="text-danger">Read More</h6></a><br><br>
 									<div class="feature-thumb">
-												<%= traveller.imgUrl %>
+												<img src="<%= traveller.imgUrl %>" alt="" width="250" height="200">
 								</div>
 								</div>
 						</div>
@@ -59,8 +51,8 @@
 									<h6 class="text-danger"><%= traveller.content %></h6><br><br>
 										<a href="#" class="primary-btn mb-40"><h6 class="text-danger">Read More</h6></a><br><br>
 									<div class="feature-thumb">
-								
-									 <%= traveller.imgUrl %>
+
+									 <img src="<%= traveller.imgUrl %>" alt="" width="250" height="200">
 						</div>
 				</div>
 			</div>
@@ -80,31 +72,3 @@
 </body>
 
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Traveller Essential</title>
-  </head>
-  <body>
-    <h1>Traveller Essential</h1>
-    <table>
-      <thead>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Image</th>
-      </thead>
-      <tbody>
-        <% for (var i=0; i<traveller.length; i++){%>
-          <tr>
-            <td><%=traveller.title %></td>
-            <td><%=traveller.content %></td>
-            <td><%=traveller.imgUrl %></td>
-          </tr>
-
-        <%}%>
-      </tbody>
-    </table>
-  </body>
-</html> -->
