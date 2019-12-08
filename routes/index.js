@@ -10,10 +10,6 @@ var isemail=require('isemail');
 var passwordValidator=require('password-validator');
 
 
-
-
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -66,9 +62,7 @@ router.post('/duemail',function (req,res) {
   })
 })
 router.post('/checka',function (req,res) {
-  var sta=schema.validate(req.body.password);
-  res.json({status:sta});
-var schema=new passwordValidator();
+  var schema=new passwordValidator();
 schema
 .is().min(8)
 .is().max(100)
