@@ -2,22 +2,30 @@
 ============================================================================================ */
 
 .home_banner_area {
-	background: url(../img/banner/home-banner.png) no-repeat center center;
-	background-size: cover;
-	min-height: 900px;
-	@media (max-width: 991px) {
-		min-height: 650px;
+
+	position: relative;
+	z-index: 1;
+	min-height: 450px;
 	}
 	.banner_inner {
-		@media (max-width: 1199px) {
-			min-height: 900px;
+		position: relative;
+		background: url(../img/banner/home-banner.png) no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		min-height: 450px;
+		z-index: 1;
+		&.overlay {
+			&:after {
+				background: #000;
+				opacity: .3;
+			}
 		}
-		@media (max-width: 991px) {
-			min-height: 650px;
+		@media (width: 991px) {
+			min-height: 450px;
 		}
 		.fullscreen {
-			@media (max-width: 991px) {
-				min-height: 650px !important;
+			@media (width: 991px) {
+				height: 650px !important;
 			}
 		}
 		.banner_content {
@@ -53,7 +61,7 @@
 	min-height: 450px;
 	.banner_inner {
 		position: relative;
-		background: url(../img/banner/myanmar.png) no-repeat center center;
+		background: url(../img/banner/home-banner.png) no-repeat center center;
 		background-size: cover;
 		width: 100%;
 		min-height: 450px;
