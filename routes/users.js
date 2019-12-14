@@ -15,47 +15,47 @@ router.get('/home', function(req, res, next) {
 
 });
 router.get('/history', function(req, res, next) {
-  var query={categories:'History'};
-  See.find(query,function (err,rtn) {
+  var que={categories:'History'};
+  See.find(que,function (err,rtn) {
     if(err) throw err;
     res.render('users/history',{see:rtn})
   })
 
 });
 router.get('/culture', function(req, res, next) {
-  var query={categories:'Culture'};
-  See.find(query,function (err,rtn) {
+  var quer={categories:'Culture'};
+  See.find(quer,function (err,rtn) {
     if(err) throw err;
     res.render('users/culture',{see:rtn})
   })
 
 });
 router.get('/archi', function(req, res, next) {
-  var query={categories:'Architecture'};
-  See.find(query,function (err,rtn) {
+  var qu={categories:'Architecture'};
+  See.find(qu,function (err,rtn) {
     if(err) throw err;
     res.render('users/archi',{see:rtn})
   })
 
 });
 router.get('/nature', function(req, res, next) {
-  var query={categories:'NatureAndWildlife'};
-  See.find(query,function (err,rtn) {
+  var q={categories:'NatureAndWildlife'};
+  See.find(q,function (err,rtn) {
     if(err) throw err;
     res.render('users/nature',{see:rtn})
   })
 });
 router.get('/festival', function(req, res, next) {
-  var query={categories:'Festival'};
-Festival.find(query,function (err,rtn) {
+  var uery={categories:'Festival'};
+Festival.find(uery,function (err,rtn) {
     if(err) throw err;
     res.render('users/festival',{festival:rtn})
   })
 
 });
 router.get('/event', function(req, res, next) {
-  var query={categories:'Event'};
-Festival.find(query,function (err,rtn) {
+  var ery={categories:'Event'};
+Festival.find(ery,function (err,rtn) {
     if(err) throw err;
     res.render('users/event',{festival:rtn})
   })
@@ -69,22 +69,22 @@ Traveller.find(function (err,rtn) {
 
 });
 router.get('/popular',function (req ,res, next) {
-  var query={categories:'Popular Place'}
-  Tour.find(query,function(err,rtn){
+  var ry={categories:'Popular Place'}
+  Tour.find(ry,function(err,rtn){
     if(err) throw err;
     res.render('users/popular',{tour:rtn})
   })
 });
 router.get('/worldhs',function (req ,res, next) {
-  var query={categories:'World Heritage Sites'}
-  Tour.find(query,function(err,rtn){
+  var y={categories:'World Heritage Sites'}
+  Tour.find(y,function(err,rtn){
     if(err) throw err;
     res.render('users/worldhs',{tour:rtn})
   })
 });
 router.get('/eathome',function (req ,res, next) {
-  var query={categories:'Eat'};
-  Eat.find(query,function(err,rtn){
+  var qy={categories:'Eat'};
+  Eat.find(qy,function(err,rtn){
     if(err) throw err;
     res.render('users/eathome',{eat:rtn})
 
@@ -92,8 +92,8 @@ router.get('/eathome',function (req ,res, next) {
 
 });
 router.get('/drink',function (req ,res, next) {
-  var query={categories:'Drink'};
-  Eat.find(query,function(err,rtn){
+  var qery={categories:'Drink'};
+  Eat.find(qery,function(err,rtn){
     if(err) throw err;
     res.render('users/drink',{eat:rtn})
 
